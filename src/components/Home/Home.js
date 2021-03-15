@@ -39,6 +39,7 @@ const Home = (props) => {
             </div>
             <div className="card w-50 mx-auto rounded d-flex justify-content-between" style={{ width: ' 540px' }}>
                 <div className="row">
+                    <h3>Your Repositories</h3>
                     <div className=" d-flex flex-wrap">
                         {
                             repo.map(repo => <User repo={repo}></User>)
