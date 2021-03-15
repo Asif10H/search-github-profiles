@@ -19,7 +19,7 @@ const Home = (props) => {
                             <h5 className="card-title">{user.name}</h5>
                             <p className="card-text">Followers: {user.followers}</p>
                             <p className="card-text">Following: {user.following}</p>
-                            <p className="card-text">public_repos: {user.public_repos}</p>
+                            <p className="card-text">Public Repositories: {user.public_repos}</p>
                         </div>
                     </div>
                     <div className="col-md-6 col-sm-12">
