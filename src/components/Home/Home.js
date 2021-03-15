@@ -37,7 +37,7 @@ const Home = (props) => {
                     </div>
                 </div>
             </div>
-            <div className="card w-50 mx-auto rounded d-flex justify-content-between">
+            <div className="card w-50 mx-auto rounded d-flex justify-content-between" style={{ width: ' 540px' }}>
                 <div className="row">
                     <div className=" d-flex flex-wrap">
                         {
