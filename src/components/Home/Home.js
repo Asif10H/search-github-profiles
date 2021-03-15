@@ -1,15 +1,25 @@
 import React, { useEffect, useState } from 'react';
+import User from '../User/User';
 
 const Home = (props) => {
     const githubUser = props.githubUser;
-    console.log('githubUser', githubUser);
     const [user, setUser] = useState({});
+    const [repo, setRepo] = useState([]);
+
     useEffect(() => {
         const url = `https://api.github.com/users/${githubUser}`
         fetch(url)
             .then(res => res.json())
             .then(data => setUser(data))
     }, [githubUser])
+
+    useEffect(() => {
+        const url = `https://api.github.com/users/${githubUser}/repos`
+        fetch(url)
+            .then(res => res.json())
+            .then(data => setRepo(data))
+    }, [githubUser])
+   // console.log(repo);
     return (
         <div>
             <div className="card mb-3 w-50 mx-auto shadow-lg p-3 mb-5 bg-body rounded rounded" style={{ width: ' 540px' }}>
@@ -27,6 +37,9 @@ const Home = (props) => {
                     </div>
                 </div>
             </div>
+            {/* {
+                repo.map(repo => <User repo={repo}></User>)
+            } */}
         </div>
     );
 };

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Home from '../Home/Home';
 const Header = () => {
-    const [user, setUser] = useState("asif10h");
-    const [githubUser, setGithubUser] = useState("asif10h");
+    const [user, setUser] = useState(" ");
+    const [githubUser, setGithubUser] = useState(" ");
 
     const handleUserName = (e) => {
         setUser(e.target.value);
